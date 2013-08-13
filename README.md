@@ -20,3 +20,7 @@ If you wish to use BootStrap items by default, then inside your Frontend::addSha
         ))->setBasePath($parent_directory)
         ;
 
+TODOs:
+
+ [ ] Add support for composer
+ [ ] Add more items to this todo
