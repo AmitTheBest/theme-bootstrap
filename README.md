@@ -1,7 +1,9 @@
 theme-bootstrap
 ===============
 
-Implements Bootstrap 3 integration for Agile Toolkit
+Implements Bootstrap 3 integration for Agile Toolkit.
+
+![image](screenshot.png)
 
 Installation
 ----
