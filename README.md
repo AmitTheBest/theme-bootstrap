@@ -22,5 +22,5 @@ If you wish to use BootStrap items by default, then inside your Frontend::addSha
 
 TODOs:
 
- [ ] Add support for composer
- [ ] Add more items to this todo
+ - [ ] Add support for composer
+ - [ ] Add more items to this todo
