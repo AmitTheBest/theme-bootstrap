@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<title><?page_title?>Agile Toolkit<?/?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="<?template?>images/favicon.ico<?/?>" type="image/x-icon" />
+		<?$js_include?>
+
+		<script type="text/javascript">
+			$(function(){
+				<?$document_ready?>
+			});
+		</script>
+	</head>
+	<body>
+
+
+<div class="navbar navbar-fixed-top">
+    <a class="navbar-brand" href="<?page?>/<?/?>"><?app_name?>My Admin<?/?></a>
+    <?Menu?>
+    <?/?>
+
+    <ul class="nav navbar-nav pull-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+        </li>
+    </ul>
+</div>
+
+
+<div class="row" style="padding-top: 5em">
+    <div class="col-lg-3">
+
+        <div class="panel">
+            <div class="panel-heading">Panel heading</div>
+
+
+            <ul class="nav">
+                <li><a href="#btn-groups-single">Basic button group</a></li>
+                <li><a href="#btn-groups-toolbar">Button toolbar</a></li>
+                <li><a href="#btn-groups-vertical">Vertical variation</a></li>
+                <li><a href="#btn-groups-justified">Justified link buttons</a></li>
+                <li><a href="#btn-dropdowns-single">Single button dropdown</a></li>
+                <li><a href="#btn-dropdowns-split">Split button dropdown</a></li>
+                <li><a href="#btn-dropdowns-sizes">Button sizes</a></li>
+                <li><a href="#btn-dropdowns-dropup">Dropup variation</a></li>
+            </ul>
+
+        </div>
+
+        <?$SidebarMenu?>
+    </div>
+
+    <div class="col-lg-9">
+        <?$Content?>
+    </div>
+</div>
+</body>
+</html>

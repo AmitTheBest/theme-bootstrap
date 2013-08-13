@@ -12,10 +12,37 @@
  *   ->setLayout('admin');
  */
 
-namespace themebootstrap;
+namespace theme_bootstrap;
 class Controller extends \AbstractController {
     function init(){
         parent::init();
+
+
+        // add locations
+        $l=$this->api->locate('addons',__NAMESPACE__,'location');
+        $addon = $this->api->locate('addons',__NAMESPACE__);
+        $l=$this->api->pathfinder->addLocation($addon,array(
+            'template'=>'templates',
+            'php'=>'defaults'
+        ))->setParent($l);
+
+    }
+
+    function layoutAdmin(){
+        $this->setApiTemplate('layout/admin');
+
+        $this->menu=$this->api->add('Menu',null,'Menu');
+        return $this;
+    }
+
+    function layoutBlank(){
+        $this->setApiTemplate('layout/blank');
+        return $this;
+    }
+    function setApiTemplate($template){
+        $this->api->template->loadTemplate($template);
+
+        $this->api->requires('atk','4.2.4');
 
         if(@$this->api->jui){
             throw $this->exception('Do not use jUI with Bootstrap');
@@ -26,16 +53,6 @@ class Controller extends \AbstractController {
 
 
         $this->api->jquery->addStaticStylesheet('//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css');
-    }
-
-    function layoutAdmin(){
-        $this->setApiTemplate('layout/admin');
-
-        $this->api->menu=$this->api->add('Menu',null,null);
-    }
-
-    function layoutBlank(){
-        $this->setApiTemplate('layout/blank');
-        return $this;
+        $this->api->jquery->addStaticInclude('//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js');
     }
 }
