@@ -42,7 +42,7 @@ class Controller extends \AbstractController {
     function setApiTemplate($template){
         $this->api->template->loadTemplate($template);
 
-        $this->api->requires('atk','4.2.4');
+        $this->api->requires('atk','4.3','https://github.com/atk4/atk4/tree/4.3');
 
         if(@$this->api->jui){
             throw $this->exception('Do not use jUI with Bootstrap');
